@@ -4,20 +4,20 @@ const TransactionHistory = ({ items }) => {
       return (  
         <section>  
           <h2 className={s.title}>Transaction History</h2>  
-          <table className="min-w-full border-collapse border border-gray-200">  
+          <table className={s.table}>  
             <thead>  
               <tr>  
-                <th className="border border-gray-300 p-2">Type</th>  
-                <th className="border border-gray-300 p-2">Amount</th>  
-                <th className="border border-gray-300 p-2">Currency</th>  
+                <th className={s.thferst}>Type</th>  
+                <th className={s.thferst}>Amount</th>  
+                <th className={s.thferst}>Currency</th>  
               </tr>  
             </thead>  
             <tbody>  
               {items.map((transaction) => (  
                 <tr key={transaction.id}>  
-                  <td className="border border-gray-300 p-2">{transaction.type}</td>  
-                  <td className="border border-gray-300 p-2">{transaction.amount}</td>  
-                  <td className="border border-gray-300 p-2">{transaction.currency}</td>  
+                  <td className={s.thp}>{transaction.type}</td>  
+                  <td className={s.thp}>{transaction.amount}</td>  
+                  <td className={s.thp}>{transaction.currency}</td>  
                 </tr>  
               ))}  
             </tbody>  
